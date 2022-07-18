@@ -121,3 +121,24 @@
     margin-left: 15px;
   }
 }
+.dis-flex {
+  display: flex;
+}
+.jus-center {
+  justify-content: center;
+}
+.jus-start {
+  justify-content: start;
+}
+.jus-end {
+  justify-content: end;
+}
+.ali-center {
+  align-items: center;
+}
+.ali-top {
+  align-items: top;
+}
+.ali-bottom {
+  align-items: bottom;
+}
