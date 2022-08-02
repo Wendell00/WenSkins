@@ -13,6 +13,7 @@
   src: url(https://fonts.gstatic.com/s/catamaran/v17/o-0bIpQoyXQa2RxT7-5B6Ryxs2E_6n1iPJ_a1ak.ttf) format('truetype');
 }
 
+
 @keyframes arrowDown{
   0% {
       bottom: 25px;
@@ -61,6 +62,7 @@
   }
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -78,6 +80,8 @@
 }
 
 @media screen and (min-width: 992px) {
+  /* HEADER */
+
   header {
     width: 100%;
     height: 125px;
@@ -165,7 +169,7 @@
     height: 100%;
     margin-left: 15px;
   }
-
+  /* HOME */
   .main-p2{
     display: flex;
     justify-content: center;
@@ -191,7 +195,7 @@
     height: 100%;
   }
 
-  .sec{
+  .cs-slider{
     background-color: #222;
     height: 300px;
   }
@@ -199,20 +203,20 @@
     font-size: 64px;
     color: #FCA311;
   }
-  .info{
+  .cs-info{
     color: white;
     font-weight: 700;
     margin-bottom: 20px;
     width: 400px;
-    height: auto;
+    height:  auto;
     text-align: start;
   }
-  .envolve{
+  .cs-envolve{
     margin-top: 100px;
     margin-left: 50px;
   }
 
-  .btn-ofertas{
+  .btn-offers{
     background-color: white;
     padding: 10px 15px;
     color: #FCA311;
@@ -222,7 +226,7 @@
     font-weight: 700;
     cursor: pointer;
   }
-  .btn-ofertas:hover{
+  .btn-offers:hover{
     background-color: #FCA311;
     color: #fff;
   }
@@ -285,6 +289,9 @@
   }
 }
 
+
+/* CLASSES PREDEFINIDAS */
+
 .dis-flex {
   display: flex;
 }
@@ -309,3 +316,4 @@
 .text-orange{
   color: #FCA311;
 }
+
