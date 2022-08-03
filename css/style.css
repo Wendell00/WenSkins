@@ -197,7 +197,8 @@
 
   .cs-slider{
     background-color: #222;
-    height: 300px;
+    height: 777;
+    padding: 110px 71.5px;
   }
   .title{
     font-size: 64px;
@@ -280,6 +281,14 @@
     transform-origin: top center;
 }
 
+/* SLIDER */
+
+.cs-carousel{
+  height: auto;
+  background-color: #ACA311;
+  max-width: 1280px;
+}
+
 }
 
 @media screen and (min-width: 1024px){
@@ -315,5 +324,13 @@
 }
 .text-orange{
   color: #FCA311;
+}
+
+.cs-no-pad{
+  padding: 0 !important;
+}
+
+.mar-bot-30{
+  margin-bottom: 30px;
 }
 
