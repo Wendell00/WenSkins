@@ -285,8 +285,118 @@
 
 .cs-carousel{
   height: auto;
-  background-color: #ACA311;
   max-width: 1280px;
+}
+
+.cs-carousel-navigator{
+  width: 145px;
+  height: 400px;
+  display: table;
+}
+
+.cs-item-counter {
+  width: 100%;
+  height: 90px;
+  display: block;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.cs-item-counter::before{
+  content: '';
+  display: block;
+  width: 35px;
+  height: 100%;
+  background-color: #222;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cs-item-counter span{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 120px;
+  font-weight: 600;
+  line-height: 90px;
+}
+
+.cs-item-navigator {
+  width: 100%;
+  display: table;
+}
+
+.cs-item-navigator a {
+  width: 20px;
+  height: 1px;
+  display: block;
+  margin: 0 0 80px 35px;
+  background-color: #373737;
+}
+
+.cs-item-navigator a.cs-item-active{
+  width: 90px;
+  background-color: #FCA311;
+}
+
+.cs-item-navigator a:last-child {
+  margin-bottom: 30px;
+}
+
+.cs-items-next-prev {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #373737;
+  border-radius: 0 23px 23px 0;
+}
+
+.cs-items-next-prev > div {
+  height: 32px;
+}
+
+.cs-items-counter {
+  font-family: 'Open Sans', sans-serif;
+  color: #8b8a8a;
+  line-height: 32px;     
+  font-weight: 600;    
+}
+
+.cs-item-prev, .cs-item-next {
+  width: 45px;
+  color: #FCA311;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.cs-items-counter span:nth-child(1){
+  color: #ccc;
+}
+
+ion-icon {
+ font-size: 32px;
+}
+
+.cs-slider-container {
+  display: block;
+  background-color: white;
+  overflow: hidden;
+}
+
+.cs-slider-list {
+  width: auto;
+  height: 700px;
+  display: block;
+  background-color: deeppink;
+  list-style: none;
+}
+
+.cs-slider-item {
+  display: block;
+  height: 500px;
+  float: left;
 }
 
 }
@@ -334,3 +444,41 @@
   margin-bottom: 30px;
 }
 
+.cs-text-primary{
+  color: #FCA311;
+}
+
+.cs-no-radius-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cs-no-radius-right {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cs-full-height {
+  height: 100vh;
+  position: relative;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.purple {
+  background: purple;
+}
+
+.blue {
+  background: blue;
+}
