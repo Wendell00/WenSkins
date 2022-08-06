@@ -380,6 +380,8 @@ ion-icon {
 .cs-slider-container {
   display: block;
   overflow: hidden;
+  height: 550px;
+  background-color: linear;
 }
 
 .cs-slider-list {
@@ -391,9 +393,20 @@ ion-icon {
 
 .cs-slider-item {
   display: block;
-  height: 500px;
+  height: 600px;
   float: left;
 }
+
+/* .cs-slider-item:nth-child(1n){
+  background: #FCA311;
+  background: linear-gradient(0deg,#FCA311, rgba(34,34,34,1) 30%);
+}
+
+.cs-slider-item:nth-child(2n){
+  background: #bcbcbc;
+  background: linear-gradient(0deg,#bcbcbc, rgba(34,34,34,1) 30%);
+} */
+
 
 .cs-slide-item-thumb {
   width: 100%;
@@ -413,9 +426,9 @@ ion-icon {
 }
 
 .cs-slide-item-info {
-  width: 100%;
+  width: 370px;
   display: table;
-  margin-top: 10%;
+  margin-top: -7px;
 }
 
 }
@@ -585,10 +598,12 @@ ion-icon {
 }
 
 .cs-btn-large {
-  height: 45px;
-  padding: 0 35px;
-  border-radius: 23px;
+  padding: 15px 50px;
+  border-radius: 12px;
   font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: content-box;
 }
 
 .cs-btn-primary-color {
@@ -608,6 +623,10 @@ ion-icon {
 }
 
 .cs-btn:hover{
-  background-color: #fff;
-  color: #FCA311;
+  background-color: #bcbcbc;
+  color: #000;
+}
+
+.cs-container-btn{
+
 }
