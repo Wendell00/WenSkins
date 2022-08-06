@@ -12,6 +12,8 @@ var sliderPos = 0;
 var currentSlide = document.querySelector('.cs-current-slide');
 var totalSlide = document.querySelector('.cs-total-slide');
 var currentCounter = 1;
+var navItems = document.querySelectorAll('.cs-item-navigator a');
+var navCounter = document.querySelector('.cs-navigator-counter span')
 
 
 //Capturando larguras individuais
@@ -77,6 +79,7 @@ var counterAdd = function () {
     if ((currentCounter >= 0) && (currentCounter < sliderTotalItems)) {
         currentCounter++;
         currentSlide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
 }
 
@@ -85,7 +88,36 @@ var counterRemove = function () {
     if ((currentCounter > 1) && (currentCounter <= sliderTotalItems)) {
         currentCounter--;
         currentSlide.innerHTML = counterFormatter(currentCounter);
+        navCounter.innerHTML = counterFormatter(currentCounter);
     }
+}
+
+//Set Active Nav
+
+var setActiveNav = function () {
+    for (var nv = 0; nv < navItems.length; nv++) {
+        let myNavNum = parseInt(navItems[nv].getAttribute('data-nav'));
+
+        if (myNavNum === currentCounter) {
+            navItems[nv].classList.add('cs-item-active');
+
+            anime({
+                targets: '.cs-item-active',
+                width: 90
+            });
+        }
+    }
+}
+
+var changeActive = function () {
+    for (var rm = 0; rm < navItems.length; rm++) {
+        navItems[rm].classList.remove('cs-item-active');
+        anime({
+            targets: navItems[rm],
+            width: 20
+        });
+    }
+    setActiveNav();
 }
 
 
@@ -93,13 +125,20 @@ var counterRemove = function () {
 //ACTIONS
 totalSlide.innerHTML = counterFormatter(sliderTotalItems);
 
+anime({
+    targets: '.cs-item-active',
+    width: 90
+});
+
 
 nextItem.addEventListener('click', function () {
     nextSlideAnim();
     counterAdd();
+    changeActive();
 });
 
 prevItem.addEventListener('click', function () {
     prevSlideAnim();
     counterRemove();
+    changeActive();
 });

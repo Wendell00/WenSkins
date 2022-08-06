@@ -231,7 +231,7 @@
     background-color: #FCA311;
     color: #fff;
   }
-  .jl-scroll-down {
+  .cs-scroll-down {
     width: 70px;
     height: 100px;
     border-radius: 35px 35px 0 0;
@@ -245,7 +245,7 @@
     z-index: 100;
   }
 
-.jl-arrow-down {
+.cs-arrow-down {
     width: 100%;
     height: 75px;
     display: table;
@@ -253,7 +253,7 @@
     position: relative;
   }
 
-.jl-arrow-down img {
+.cs-arrow-down img {
     width: 16px;
     height: 10px;
     display: block;        
@@ -266,7 +266,7 @@
     animation: arrowDown 1.5s linear 1.5s infinite;
   }
 
-  .jl-arrow-down:before {
+  .cs-arrow-down:before {
     content: '';
     width: 2px;
     height: 45px;
@@ -284,7 +284,7 @@
 /* SLIDER */
 
 .cs-carousel{
-  height: auto;
+  height: 550px;
   max-width: 1280px;
 }
 
@@ -294,7 +294,7 @@
   display: table;
 }
 
-.cs-item-counter {
+.cs-navigator-counter {
   width: 100%;
   height: 90px;
   display: block;
@@ -302,7 +302,7 @@
   position: relative;
 }
 
-.cs-item-counter::before{
+.cs-navigator-counter::before{
   content: '';
   display: block;
   width: 35px;
@@ -313,7 +313,7 @@
   left: 0;
 }
 
-.cs-item-counter span{
+.cs-navigator-counter span{
   font-family: 'Open Sans', sans-serif;
   font-size: 120px;
   font-weight: 600;
@@ -334,7 +334,6 @@
 }
 
 .cs-item-navigator a.cs-item-active{
-  width: 90px;
   background-color: #FCA311;
 }
 
@@ -368,7 +367,6 @@
   color: #FCA311;
   text-align: center;
   cursor: pointer;
-
 }
 
 .cs-items-counter span:nth-child(1){
@@ -381,7 +379,6 @@ ion-icon {
 
 .cs-slider-container {
   display: block;
-  background-color: white;
   overflow: hidden;
 }
 
@@ -389,7 +386,6 @@ ion-icon {
   width: auto;
   height: 700px;
   display: block;
-  background-color: deeppink;
   list-style: none;
 }
 
@@ -397,6 +393,29 @@ ion-icon {
   display: block;
   height: 500px;
   float: left;
+}
+
+.cs-slide-item-thumb {
+  width: 100%;
+  background-color: #2C2C2C;
+  display: table;
+  padding: 50px 0;
+  position: relative;
+  left: -35px;
+}
+
+.cs-slide-item-thumb img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  left: -50px;
+}
+
+.cs-slide-item-info {
+  width: 100%;
+  display: table;
+  margin-top: 10%;
 }
 
 }
@@ -444,6 +463,71 @@ ion-icon {
   margin-bottom: 30px;
 }
 
+.cs-mar-15 {
+  margin: 15px;
+}
+.cs-mar-top-15 {
+  margin-top: 15px;
+}
+.cs-mar-right-15 {
+  margin-right: 15px;
+}
+.cs-mar-bottom-15 {
+  margin-bottom: 15px;
+}
+.cs-mar-left-15 {
+  margin-left: 15px;
+}
+
+.cs-pad-15 {
+  padding: 15px;
+}
+.cs-pad-top-15 {
+  padding-top: 15px;
+}
+.cs-pad-right-15 {
+  padding-right: 15px;
+}
+.cs-pad-bottom-15 {
+  padding-bottom: 15px;
+}
+.cs-pad-left-15 {
+  padding-left: 15px;
+}
+
+
+.cs-mar-30 {
+  margin: 30px;
+}
+.cs-mar-top-30 {
+  margin-top: 30px;
+}
+.cs-mar-right-30 {
+  margin-right: 30px;
+}
+.cs-mar-bottom-30 {
+  margin-bottom: 30px;
+}
+.cs-mar-left-30 {
+  margin-left: 30px;
+}
+
+.cs-pad-30 {
+  padding: 30px;
+}
+.cs-pad-top-30 {
+  padding-top: 30px;
+}
+.cs-pad-right-30 {
+  padding-right: 30px;
+}
+.cs-pad-bottom-30 {
+  padding-bottom: 30px;
+}
+.cs-pad-left-30 {
+  padding-left: 30px;
+}
+
 .cs-text-primary{
   color: #FCA311;
 }
@@ -481,4 +565,49 @@ ion-icon {
 
 .blue {
   background: blue;
+}
+
+.cs-title {
+  font-family: 'Abril Fatface', serif;
+  font-weight: normal;
+}
+
+.cs-title-large {
+  font-size: 50px;
+}
+
+.cs-text-light{
+  color: #bcbcbc
+}
+
+.cs-text-green{
+  color: #fff;
+}
+
+.cs-btn-large {
+  height: 45px;
+  padding: 0 35px;
+  border-radius: 23px;
+  font-size: 16px;
+}
+
+.cs-btn-primary-color {
+  background-color: #FCA311;
+  color: #1C1C1C;
+}
+
+.cs-btn {
+  display: table; 
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s ease-out;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.cs-btn:hover{
+  background-color: #fff;
+  color: #FCA311;
 }
