@@ -3,9 +3,12 @@
 //Declarando variáveis do slider
 var sliderContainer = document.querySelector('.cs-slider-container');
 var sliderList = document.querySelector('.cs-slider-list');
+var sliderGlowEffect = document.querySelectorAll('.cs-glow-effect');
 var sliderItem = document.querySelectorAll('.cs-slider-item');
+var sliderSinopse = document.querySelectorAll('.cs-item-sinopse')
 const sliderTotalItems = sliderItem.length;
 var sliderListWidth = null;
+var sliderTittle = document.querySelectorAll('.cs-slide-title')
 var prevItem = document.querySelector('.cs-item-prev');
 var nextItem = document.querySelector('.cs-item-next');
 var sliderPos = 0;
@@ -13,7 +16,7 @@ var currentSlide = document.querySelector('.cs-current-slide');
 var totalSlide = document.querySelector('.cs-total-slide');
 var currentCounter = 1;
 var navItems = document.querySelectorAll('.cs-item-navigator a');
-var navCounter = document.querySelector('.cs-navigator-counter span')
+var navCounter = document.querySelector('.cs-navigator-counter span');
 
 
 //Capturando larguras individuais
@@ -30,6 +33,26 @@ for (var p = 0; p < sliderItem.length; p++) {
 }
 
 sliderList.style.width = sliderListWidth + 'px';
+
+// Ajustando tamanho do GlowEffect
+for (var c = 0; c < sliderGlowEffect.length; c++){
+    sliderGlowEffect[c].style.width = (sliderListWidth/sliderItem.length) + 'px';
+
+    // Ajustando a marginTop do Glow deixando flexível para qualquer tamanho de texto
+    if(sliderSinopse[c].clientHeight < 144){
+        sliderGlowEffect[c].style.marginTop = ((144 - sliderSinopse[c].clientHeight) + 82) + 'px'
+    }
+    else if(sliderSinopse[c].clientHeight > 144){
+        sliderGlowEffect[c].style.marginTop = ((sliderSinopse[c].clientHeight - 144) - 82) + 'px'
+    }
+}
+
+// Ajustando altura do Titulo do Slide
+for (var c = 0; c < sliderTittle.length; c++){
+    sliderTittle[c].style.height = '116px'
+}
+
+
 
 
 //Fazendo Animaçao do Slider onClick
@@ -48,7 +71,8 @@ var nextSlideAnim = function () {
     sliderPos -= containerWidth;
     anime({
         targets: sliderList,
-        translateX: sliderPos
+        translateX: sliderPos,
+        easing: 'cubicBezier(0,1.01,.32,1)'
     });
 }
 
@@ -61,7 +85,8 @@ var prevSlideAnim = function () {
     sliderPos += containerWidth;
     anime({
         targets: sliderList,
-        translateX: sliderPos
+        translateX: sliderPos,
+        easing: 'cubicBezier(0,1.01,.32,1)'
     });
 }
 
@@ -92,19 +117,15 @@ var counterRemove = function () {
     }
 }
 
-//Set Active Nav
+//Set Active Slide
 
-var setActiveNav = function () {
-    for (var nv = 0; nv < navItems.length; nv++) {
-        let myNavNum = parseInt(navItems[nv].getAttribute('data-nav'));
-
-        if (myNavNum === currentCounter) {
-            navItems[nv].classList.add('cs-item-active');
-
-            anime({
-                targets: '.cs-item-active',
-                width: 90
-            });
+var setActiveSlide = function () {
+    for (var sld = 0; sld < sliderItem.length; sld++) {
+        let mySlideNum = parseInt(sliderItem[sld].getAttribute('data-slide'));
+        console.log(currentCounter)
+        if (mySlideNum === currentCounter) {
+            sliderItem[sld].classList.add('cs-slide-active');
+            sliderItem[sld].querySelector('.cs-slide-item-box').classList.add('cs-scale-right')
         }
     }
 }
@@ -117,7 +138,11 @@ var changeActive = function () {
             width: 20
         });
     }
-    setActiveNav();
+
+    for (var rms = 0; rms < sliderItem.length; rms++) {
+        sliderItem[rms].classList.remove('cs-slide-active');
+    }
+    setActiveSlide();
 }
 
 
