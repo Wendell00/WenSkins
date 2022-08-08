@@ -643,8 +643,20 @@ ion-icon {
 
 .cs-btn-primary-color {
   background-color: #FCA311;
-  color: #1C1C1C;
 }
+
+.cs-btn-secondary-color{
+  background-color: #bcbcbc;
+}
+
+.cs-btn-primary-color:hover {
+  background-color: #bcbcbc;
+}
+
+.cs-btn-secondary-color:hover {
+  background-color: #FCA311;
+}
+
 
 .cs-btn {
   display: table; 
@@ -655,12 +667,10 @@ ion-icon {
   transition: all 0.2s ease-out;
   text-transform: lowercase;
   cursor: pointer;
+  color: #1C1C1C;
 }
 
-.cs-btn:hover{
-  background-color: #bcbcbc;
-  color: #000;
-}
+
 
 .w-100{
   width: 375px;
