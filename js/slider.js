@@ -43,7 +43,7 @@ for (var c = 0; c < sliderGlowEffect.length; c++){
         sliderGlowEffect[c].style.marginTop = ((144 - sliderSinopse[c].clientHeight) + 82) + 'px'
     }
     else if(sliderSinopse[c].clientHeight > 144){
-        sliderGlowEffect[c].style.marginTop = ((sliderSinopse[c].clientHeight - 144) - 82) + 'px'
+        sliderGlowEffect[c].style.marginTop = (((sliderSinopse[c].clientHeight - 144) - 82)* (-1)) + 'px'
     }
 }
 
@@ -117,6 +117,21 @@ var counterRemove = function () {
     }
 }
 
+var setActiveNav = function () {
+    for (var nv = 0; nv < navItems.length; nv++) {
+        let myNavNum = parseInt(navItems[nv].getAttribute('data-nav'));
+
+        if (myNavNum === currentCounter) {
+            navItems[nv].classList.add('cs-item-active');
+
+            anime({
+                targets: '.cs-item-active',
+                width: 90
+            });
+        }
+    }
+}
+
 //Set Active Slide
 
 var setActiveSlide = function () {
@@ -155,6 +170,7 @@ var changeActive = function () {
         sliderItem[rms].querySelector('.cs-slide-info-price button').classList.remove('cs-fade-from-left')
     }
     setActiveSlide();
+    setActiveNav();
 }
 
 
