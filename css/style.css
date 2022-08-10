@@ -19,6 +19,26 @@
   }
 }
 
+@keyframes scaleUP{
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut{
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeFromLeft{
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+
 
 @keyframes arrowDown{
   0% {
@@ -428,12 +448,19 @@ ion-icon {
   height: auto;
   position: relative;
   left: -50px;
+  transform: scale(0);
 }
 
 .cs-slide-item-info {
   width: 370px;
   display: table;
   margin-top: -7px;
+}
+
+.cs-slide-item-info h1, .cs-slide-info-price p, .cs-slide-info-price button{
+  position: relative;
+  opacity: 0;
+  left: -75px;
 }
 
 .cs-slide-info-price{
@@ -593,6 +620,18 @@ ion-icon {
 
 .cs-scale-right{
   animation: scaleRight 0.7s 0.5s forwards cubic-bezier(0,1.01,.32,1);
+}
+
+.cs-scale-up{
+  animation: scaleUP 0.5s 0.5s forwards cubic-bezier(0,1.01,.32,1);
+}
+
+.cs-fade-out{
+  animation: fadeOut 2s forwards ease-out;
+}
+
+.cs-fade-from-left{
+  animation: fadeFromLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
 }
 
 .red {

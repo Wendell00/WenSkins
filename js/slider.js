@@ -126,9 +126,15 @@ var setActiveSlide = function () {
         if (mySlideNum === currentCounter) {
             sliderItem[sld].classList.add('cs-slide-active');
             sliderItem[sld].querySelector('.cs-slide-item-box').classList.add('cs-scale-right')
+            sliderItem[sld].querySelector('.cs-slide-item-thumb img').classList.add('cs-scale-up')
+            sliderItem[sld].querySelector('.cs-slide-item-info h1').classList.add('cs-fade-from-left')
+            sliderItem[sld].querySelector('.cs-slide-info-price p').classList.add('cs-fade-from-left')
+            sliderItem[sld].querySelector('.cs-slide-info-price .cs-item-sinopse').classList.add('cs-fade-from-left')
+            sliderItem[sld].querySelector('.cs-slide-info-price button').classList.add('cs-fade-from-left')
         }
     }
 }
+
 
 var changeActive = function () {
     for (var rm = 0; rm < navItems.length; rm++) {
@@ -141,6 +147,12 @@ var changeActive = function () {
 
     for (var rms = 0; rms < sliderItem.length; rms++) {
         sliderItem[rms].classList.remove('cs-slide-active');
+        sliderItem[rms].querySelector('.cs-slide-item-box').classList.remove('cs-scale-right')
+        sliderItem[rms].querySelector('.cs-slide-item-thumb img').classList.remove('cs-scale-up')
+        sliderItem[rms].querySelector('.cs-slide-item-info h1').classList.remove('cs-fade-from-left')
+        sliderItem[rms].querySelector('.cs-slide-info-price p').classList.remove('cs-fade-from-left')
+        sliderItem[rms].querySelector('.cs-slide-info-price .cs-item-sinopse').classList.remove('cs-fade-from-left')
+        sliderItem[rms].querySelector('.cs-slide-info-price button').classList.remove('cs-fade-from-left')
     }
     setActiveSlide();
 }
