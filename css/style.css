@@ -215,6 +215,8 @@
   .main{
     height: 500px;
     margin-bottom:45px;
+    position: fixed;
+    z-index: 1;
   }
 
   .main .row{
@@ -264,7 +266,7 @@
     background-color: #FCA311;
     display: block;        
     position: absolute;
-    bottom: 0;
+    top: -13px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -308,6 +310,11 @@
 }
 
 /* SLIDER */
+
+.cs-slider{
+  position: relative;
+  z-index: 2;
+}
 
 .cs-carousel{
   height: 550px;
@@ -619,11 +626,11 @@ ion-icon {
 }
 
 .cs-scale-right{
-  animation: scaleRight 0.7s 0.5s forwards cubic-bezier(0,1.01,.32,1);
+  animation: scaleRight 0.2s 0.2s forwards cubic-bezier(0,1.01,.32,1);
 }
 
 .cs-scale-up{
-  animation: scaleUP 0.5s 0.5s forwards cubic-bezier(0,1.01,.32,1);
+  animation: scaleUP 0.05s 0.2s forwards cubic-bezier(0,1.01,.32,1);
 }
 
 .cs-fade-out{
@@ -631,7 +638,7 @@ ion-icon {
 }
 
 .cs-fade-from-left{
-  animation: fadeFromLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
+  animation: fadeFromLeft 2s 0.5s forwards cubic-bezier(0,1.01,.32,1);
 }
 
 .red {
@@ -717,4 +724,9 @@ ion-icon {
 
 .cs-font-style{
   font-style: italic;
+}
+
+.parallax{
+  height: 500px;
+  margin-bottom: 45px;
 }
