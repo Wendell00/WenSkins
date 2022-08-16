@@ -245,7 +245,6 @@
   .title{
     font-size: 64px;
     color: #FCA311;
-    animation: shake 0.5s infinite cubic-bezier(0,1.01,.32,1);
   }
   .cs-info{
     color: white;
@@ -744,4 +743,8 @@ ion-icon {
 .parallax{
   height: 500px;
   margin-bottom: 45px;
+}
+
+.shake{
+  animation: shake 0.5s 2 cubic-bezier(0,1.01,.32,1);
 }
