@@ -248,15 +248,14 @@
     width:598px;
     margin-right: 120px;
     filter: grayscale(100%);
-    transform: translateY(590px);
-    animation: subirImg 2s forwards 1 ease-in-out ;
     transition: 1s;
   }
 
-  .img-main:hover{
-    transition: 3s;
-    filter: grayscale(0%);
-  } 
+  .cs-envolve-img{
+    transition: 1s;
+    transform: translateY(590px);
+    animation: subirImg 2s forwards 1 ease-in-out;
+  }
 
   .main{
     height: 500px;
@@ -779,4 +778,8 @@ ion-icon {
 
 .shake{
   animation: shake 0.5s 2 cubic-bezier(0,1.01,.32,1);
+}
+
+.greyScaleAnime{
+  animation: greyScale 2s forwards cubic-bezier(0,1.01,.32,1);
 }

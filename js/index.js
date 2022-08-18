@@ -4,9 +4,14 @@ var rellax =  new Rellax('.rellax');
 
 let shake = document.querySelector(".title")
 let greyScale = document.querySelector(".img-main")
+let verOfertas = document.querySelector(".btn-offers")
 
-greyScale.addEventListener('mouseover', function(e){
-    greyScale.classList.add('greyScaleAnime')
+verOfertas.addEventListener('mouseover', function(e){
+    greyScale.style.filter = 'grayscale(0%)';
+})
+
+verOfertas.addEventListener('mouseleave', function(e){
+    greyScale.style.filter = 'grayscale(100%)';
 })
 
 setInterval(function () {
