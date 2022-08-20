@@ -17,3 +17,14 @@ verOfertas.addEventListener('mouseleave', function(e){
 setInterval(function () {
     shake.classList.toggle('shake')
 }, 2000);
+
+let csScrollDown = document.querySelector('.cs-scroll-down')
+
+// var waypoint = new Waypoint({
+//     element: document.querySelector('.cs-scroll-down'),
+//     handler: function(direction) {
+//         csScrollDown.classList.toggle("cs-fade-out")
+//         changeActive()
+//     },
+//     offset: '70%'
+//   })

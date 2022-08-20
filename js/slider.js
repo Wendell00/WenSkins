@@ -17,6 +17,7 @@ var totalSlide = document.querySelector('.cs-total-slide');
 var currentCounter = 1;
 var navItems = document.querySelectorAll('.cs-item-navigator a');
 var navCounter = document.querySelector('.cs-navigator-counter span');
+var carouselNavigator = document.querySelector('.cs-carousel-navigator')
 
 
 //Capturando larguras individuais
@@ -195,3 +196,22 @@ prevItem.addEventListener('click', function () {
     counterRemove();
     changeActive();
 });
+
+let grayScale2 = document.querySelector(".img-main")
+
+var waypoint = new Waypoint({
+    element: document.querySelector('.cs-scroll-down'),
+    handler: function(direction) {
+        csScrollDown.classList.toggle("cs-fade-out")
+    },
+    offset: '70%'
+  })
+
+var waypoint = new Waypoint({
+    element: document.querySelector('.cs-scroll-down'),
+    handler: function(direction) {
+        changeActive()
+    },
+    offset: '40%'
+  })
+
