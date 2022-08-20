@@ -197,6 +197,8 @@ prevItem.addEventListener('click', function () {
     changeActive();
 });
 
+// Waypoint no slide
+
 let grayScale2 = document.querySelector(".img-main")
 
 var waypoint = new Waypoint({
