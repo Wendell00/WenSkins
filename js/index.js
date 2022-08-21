@@ -20,6 +20,18 @@ setInterval(function () {
 
 let csScrollDown = document.querySelector('.cs-scroll-down')
 
+let typed = new Typed('.typedSkins', {
+    strings: [" ", "SKINS"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    startDelay: 3000
+  });
+
+setInterval(function () {
+    var typedCursor = document.querySelector('.typed-cursor');
+    typedCursor.style.opacity = '0';
+}, 5000);
+
 // var waypoint = new Waypoint({
 //     element: document.querySelector('.cs-scroll-down'),
 //     handler: function(direction) {

@@ -142,15 +142,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 @media screen and (min-width: 320px) {
   body,
   html {
     width: 100%;
     background-color: #373737;
   }
-}
 
-@media screen and (min-width: 992px) {
   /* HEADER */
 
   header {
@@ -548,6 +548,14 @@ ion-icon {
   background: #bcbcbc;
   background: linear-gradient(0deg,#bcbcbc, rgba(34,34,34,1) 30%);
 } 
+}
+
+@media screen and (min-width: 576px){
+    
+}
+
+@media screen and (min-width: 992px) {
+  
 
 }
 
@@ -558,6 +566,13 @@ ion-icon {
   }
 }
 
+@media screen and (min-width: 1364px){
+    
+}
+
+@media screen and (min-width: 1600px){
+    
+}
 
 /* CLASSES PREDEFINIDAS */
 
