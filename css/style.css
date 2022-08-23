@@ -361,8 +361,9 @@
   header {
     width: 100%;
     height: 125px;
+    margin-left: 65px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     transform: translateY(-300px);
     animation: subirImg 2s 2s forwards 1 ease-in-out;
   }
@@ -371,6 +372,7 @@
     background-color: #FCA311;
     height: 70px;
     width: 500px;
+    display: none;
   }
   .nav-1 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
@@ -722,5 +724,13 @@
   .img-main {
     width: 600px;
     margin-right: 170px;
+  }
+  .nav-1,
+  .nav-2 {
+    display: block;
+  }
+  header {
+    justify-content: center;
+    margin-left: 0;
   }
 }
