@@ -38,12 +38,13 @@ setInterval(function () {
 
 let fecharMenuMob = document.querySelector('.btn-close-mob')
 let abrirMenuMob = document.querySelector('.btn-menu-mob')
+let headerBgMob = document.querySelector('.header-bg-mob')
 let menuMob = document.querySelector('.header-mob')
 
 abrirMenuMob.addEventListener('click', function(e){
     menuMob.classList.toggle('dis-block')
 })
 
-menuMob.addEventListener('click', function (e){
+headerBgMob.addEventListener('click', function (e){
     menuMob.classList.toggle('dis-block')
 })
