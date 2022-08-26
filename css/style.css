@@ -209,15 +209,28 @@
     background-color: #222;
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: -100%;
   }
-  .header-mob .nav-mob li {
+  .header-mob .nav-mob ul {
+    margin-top: 70px;
+  }
+  .header-mob .nav-mob ul li {
     margin-top: 20px;
   }
-  .header-mob .nav-mob li .nav-a-mob {
+  .header-mob .nav-mob ul li .nav-a-mob {
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
+  }
+  .header-bg-mob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .header-bg-logo-mob {
+    width: 60%;
+    opacity: 0.4;
   }
   header {
     width: 100%;
@@ -228,7 +241,8 @@
     animation: subirImg 2s 2s forwards 1 ease-in-out;
   }
   .btn-menu-mob,
-  .btn-config-mob {
+  .btn-config-mob,
+  .btn-close-mob {
     border-radius: 50%;
     width: 42px;
     height: 42px;
@@ -238,8 +252,17 @@
     cursor: pointer;
   }
   .btn-menu-mob :hover,
-  .btn-config-mob :hover {
+  .btn-config-mob :hover,
+  .btn-close-mob :hover {
     color: #fff;
+  }
+  .btn-close-mob {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 52px;
+    height: 52px;
+    color: #ccc;
   }
   .btn-menu-mob ion-icon,
   .btn-config-mob ion-icon {
@@ -647,6 +670,9 @@
 }
 .dis-flex {
   display: flex;
+}
+.dis-block {
+  display: block;
 }
 .jus-center {
   justify-content: center;

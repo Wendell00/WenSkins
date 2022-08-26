@@ -199,6 +199,8 @@ prevItem.addEventListener('click', function () {
 
 // Waypoint no slide
 
+let csScrollDown = document.querySelector('.cs-scroll-down')
+
 let grayScale2 = document.querySelector(".img-main")
 
 var waypoint = new Waypoint({

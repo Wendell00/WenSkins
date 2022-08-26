@@ -33,18 +33,34 @@
              background-color: #222;
              position: absolute;
              top: 0px;
-             right: 0px;
+             right: -100%;
 
-             li {
-                 margin-top: 20px;
+             ul{
+                margin-top: 70px;
 
-                 .nav-a-mob {
-                     text-decoration: none;
-                     color: #fff;
-                     font-size: 1.5rem;
-                 }
+                li {
+                    margin-top: 20px;
+   
+                    .nav-a-mob {
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 1.5rem;
+                    }
+                }
              }
          }
+     }
+
+     .header-bg-mob{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+     }
+
+     .header-bg-logo-mob{
+        width: 60%;
+        opacity: .4;
      }
 
      header {
@@ -56,7 +72,7 @@
          animation: subirImg 2s 2s forwards 1 ease-in-out;
      }
 
-     .btn-menu-mob, .btn-config-mob{
+     .btn-menu-mob, .btn-config-mob, .btn-close-mob{
         border-radius: 50%;
         width: 42px;
         height: 42px;
@@ -68,6 +84,15 @@
         :hover{
             color: #fff;
         }
+     }
+
+     .btn-close-mob{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 52px;
+        height: 52px;
+        color: #ccc;
      }
 
      .btn-menu-mob ion-icon, .btn-config-mob ion-icon{
