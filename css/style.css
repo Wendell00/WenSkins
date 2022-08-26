@@ -200,7 +200,7 @@
     position: fixed;
     height: 100vh;
     background-color: rgba(252, 163, 17, 0.95);
-    display: block;
+    display: none;
     z-index: 3;
   }
   .header-mob .nav-mob {
@@ -227,6 +227,31 @@
     transform: translateY(-300px);
     animation: subirImg 2s 2s forwards 1 ease-in-out;
   }
+  .btn-menu-mob,
+  .btn-config-mob {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .btn-menu-mob :hover,
+  .btn-config-mob :hover {
+    color: #fff;
+  }
+  .btn-menu-mob ion-icon,
+  .btn-config-mob ion-icon {
+    color: #000;
+    font-size: 42px;
+  }
+  .btn-menu-mob {
+    margin-left: -5px;
+  }
+  .btn-config-mob {
+    margin-right: -5px;
+  }
   .nav-1,
   .nav-2 {
     background-color: #FCA311;
@@ -236,6 +261,9 @@
   }
   .nav-1 {
     border-radius: 30% 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .nav-1 ul {
     display: none;
@@ -251,6 +279,9 @@
   }
   .nav-2 {
     border-radius: 0 30% 30% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .nav-2 ul {
     display: none;
@@ -608,7 +639,8 @@
     margin-left: 0;
     display: flex;
   }
-  .header-mob {
+  .header-mob,
+  .btn-menu-mob {
     display: none;
   }
 }
