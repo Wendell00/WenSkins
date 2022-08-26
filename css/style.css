@@ -113,6 +113,12 @@
     opacity: 1;
   }
 }
+@keyframes fadeFromRight {
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
 @keyframes fade {
   to {
     opacity: 1;
@@ -169,6 +175,9 @@
 .cs-fade-from-left {
   animation: fadeFromLeft 2s 0.5s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
+.cs-fade-from-right {
+  animation: fadeFromRight 1s forwards cubic-bezier(0, 1.01, 0.32, 1);
+}
 .translate-0 {
   animation: translate-0 1s forwards cubic-bezier(0, 1.01, 0.32, 1);
 }
@@ -209,6 +218,7 @@
     background-color: #222;
     position: absolute;
     top: 0px;
+    opacity: 0;
     right: -100%;
   }
   .header-mob .nav-mob ul {
@@ -216,6 +226,7 @@
   }
   .header-mob .nav-mob ul li {
     margin-top: 20px;
+    list-style-type: none;
   }
   .header-mob .nav-mob ul li .nav-a-mob {
     text-decoration: none;

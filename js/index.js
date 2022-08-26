@@ -40,11 +40,17 @@ let fecharMenuMob = document.querySelector('.btn-close-mob')
 let abrirMenuMob = document.querySelector('.btn-menu-mob')
 let headerBgMob = document.querySelector('.header-bg-mob')
 let menuMob = document.querySelector('.header-mob')
+let navMob = document.querySelector('.nav-mob')
 
 abrirMenuMob.addEventListener('click', function(e){
     menuMob.classList.toggle('dis-block')
+    navMob.classList.add('cs-fade-from-right')
 })
 
 headerBgMob.addEventListener('click', function (e){
+    menuMob.classList.toggle('dis-block')
+})
+
+fecharMenuMob.addEventListener('click', function (e){
     menuMob.classList.toggle('dis-block')
 })
