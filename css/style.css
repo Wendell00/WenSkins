@@ -213,7 +213,7 @@
     z-index: 3;
   }
   .header-mob .nav-mob {
-    width: 100%;
+    width: calc(100vw - 40%);
     height: 100vh;
     background-color: #222;
     position: absolute;
@@ -374,6 +374,10 @@
     margin-left: 15px;
   }
   /* HOME */
+  main {
+    display: flex;
+    justify-content: center;
+  }
   .main-p2 {
     display: flex;
     justify-content: center;
@@ -398,6 +402,7 @@
     animation: subirImg 2s forwards 1 ease-in-out;
   }
   .main {
+    max-width: 1300px;
     height: 500px;
     margin-bottom: 45px;
     position: fixed;
@@ -512,10 +517,10 @@
     content: '';
     display: block;
     width: 35px;
-    height: 100%;
+    height: 180px;
     background-color: #222;
     position: absolute;
-    top: 0;
+    top: -40px;
     left: 0;
   }
   .cs-navigator-counter span {

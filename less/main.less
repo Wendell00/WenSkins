@@ -28,7 +28,7 @@
          z-index: 3;
 
          .nav-mob {
-             width: 100%;
+             width: calc(100vw - 40%);
              height: 100vh;
              background-color: #222;
              position: absolute;
@@ -36,33 +36,33 @@
              opacity: 0;
              right: -100%;
 
-             ul{
-                margin-top: 70px;
+             ul {
+                 margin-top: 70px;
 
-                li {
-                    margin-top: 20px;
-                    list-style-type: none;
-   
-                    .nav-a-mob {
-                        text-decoration: none;
-                        color: #fff;
-                        font-size: 1.5rem;
-                    }
-                }
+                 li {
+                     margin-top: 20px;
+                     list-style-type: none;
+
+                     .nav-a-mob {
+                         text-decoration: none;
+                         color: #fff;
+                         font-size: 1.5rem;
+                     }
+                 }
              }
          }
      }
 
-     .header-bg-mob{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+     .header-bg-mob {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
      }
 
-     .header-bg-logo-mob{
-        width: 60%;
-        opacity: .4;
+     .header-bg-logo-mob {
+         width: 60%;
+         opacity: .4;
      }
 
      header {
@@ -74,45 +74,48 @@
          animation: subirImg 2s 2s forwards 1 ease-in-out;
      }
 
-     .btn-menu-mob, .btn-config-mob, .btn-close-mob{
-        border-radius: 50%;
-        width: 42px;
-        height: 42px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
+     .btn-menu-mob,
+     .btn-config-mob,
+     .btn-close-mob {
+         border-radius: 50%;
+         width: 42px;
+         height: 42px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         cursor: pointer;
 
-        :hover{
-            color: #fff;
-        }
+         :hover {
+             color: #fff;
+         }
      }
 
-     .btn-close-mob{
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 52px;
-        height: 52px;
-        color: #ccc;
+     .btn-close-mob {
+         position: absolute;
+         top: 5px;
+         right: 5px;
+         width: 52px;
+         height: 52px;
+         color: #ccc;
      }
 
-     .btn-menu-mob ion-icon, .btn-config-mob ion-icon{
-        color: #000;
-        font-size: 42px;
+     .btn-menu-mob ion-icon,
+     .btn-config-mob ion-icon {
+         color: #000;
+         font-size: 42px;
      }
 
-     .btn-menu-mob{
-        margin-left: -5px;
+     .btn-menu-mob {
+         margin-left: -5px;
      }
 
-     .btn-config-mob{
-        margin-right: -5px;
+     .btn-config-mob {
+         margin-right: -5px;
      }
 
      .nav-1,
      .nav-2 {
-         background-color: #FCA311;
+         background-color: @primary-color;
          height: 70px;
          width: 75px;
          margin-top: 0px;
@@ -195,7 +198,7 @@
      header .navbar-center {
          width: 250px;
          height: 120px;
-         background-color: #FCA311;
+         background-color: @primary-color;
          padding: 10px;
          display: flex;
          justify-content: center;
@@ -211,6 +214,11 @@
      }
 
      /* HOME */
+     main{
+        display: flex;
+        justify-content: center;
+     }
+     
      .main-p2 {
          display: flex;
          justify-content: center;
@@ -239,6 +247,7 @@
      }
 
      .main {
+         max-width: 1300px;
          height: 500px;
          margin-bottom: 45px;
          position: fixed;
@@ -257,7 +266,7 @@
 
      .title {
          font-size: 64px;
-         color: #FCA311;
+         color: @primary-color;
      }
 
      .cs-info {
@@ -277,7 +286,7 @@
      .btn-offers {
          background-color: white;
          padding: 10px 15px;
-         color: #FCA311;
+         color: @primary-color;
          font-size: 24px;
          border-style: none;
          border-radius: 8px;
@@ -286,7 +295,7 @@
      }
 
      .btn-offers:hover {
-         background-color: #FCA311;
+         background-color: @primary-color;
          color: #fff;
      }
 
@@ -294,7 +303,7 @@
          width: 70px;
          height: 100px;
          border-radius: 35px 35px 0 0;
-         background-color: #FCA311;
+         background-color: @primary-color;
          display: block;
          position: absolute;
          top: -13px;
@@ -370,10 +379,10 @@
          content: '';
          display: block;
          width: 35px;
-         height: 100%;
+         height: 180px;
          background-color: #222;
          position: absolute;
-         top: 0;
+         top: -40px;
          left: 0;
      }
 
@@ -399,7 +408,7 @@
          }
 
          a.cs-item-active {
-             background-color: #FCA311;
+             background-color: @primary-color;
          }
 
          a:last-child {
@@ -431,7 +440,7 @@
      .cs-item-prev,
      .cs-item-next {
          width: 45px;
-         color: #FCA311;
+         color: @primary-color;
          text-align: center;
          cursor: pointer;
      }
@@ -519,8 +528,8 @@
      }
 
      .cs-glow-effect-color-orange {
-         background: #FCA311;
-         background: linear-gradient(0deg, #FCA311, rgba(34, 34, 34, 1) 30%);
+         background: @primary-color;
+         background: linear-gradient(0deg, @primary-color, rgba(34, 34, 34, 1) 30%);
      }
 
      .cs-glow-effect-color-white {
@@ -567,7 +576,9 @@
          display: flex;
      }
 
-     .header-mob, .btn-menu-mob, .btn-config-mob {
+     .header-mob,
+     .btn-menu-mob,
+     .btn-config-mob {
          display: none;
      }
  }
