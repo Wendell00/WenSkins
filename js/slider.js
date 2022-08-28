@@ -138,7 +138,6 @@ var setActiveNav = function () {
 var setActiveSlide = function () {
     for (var sld = 0; sld < sliderItem.length; sld++) {
         let mySlideNum = parseInt(sliderItem[sld].getAttribute('data-slide'));
-        console.log(currentCounter)
         if (mySlideNum === currentCounter) {
             sliderItem[sld].classList.add('cs-slide-active');
             sliderItem[sld].querySelector('.cs-slide-item-box').classList.add('cs-scale-right')

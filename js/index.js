@@ -9,11 +9,17 @@ let verOfertas = document.querySelector(".btn-offers")
 
 // Filtro na img da main
 verOfertas.addEventListener('mouseover', function(e){
+    greyScale.style.transition = '1s';
     greyScale.style.filter = 'grayscale(0%)';
 })
 
 verOfertas.addEventListener('mouseleave', function(e){
     greyScale.style.filter = 'grayscale(100%)';
+    var tirarTransition = setInterval(function () {
+        greyScale.style.transition = '0s';
+        clearInterval(tirarTransition)
+    }, 1200)
+    
 })
 
 // Shake no titulo da main
@@ -54,3 +60,4 @@ headerBgMob.addEventListener('click', function (e){
 fecharMenuMob.addEventListener('click', function (e){
     menuMob.classList.toggle('dis-block')
 })
+

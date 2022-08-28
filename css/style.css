@@ -213,7 +213,7 @@
     z-index: 3;
   }
   .header-mob .nav-mob {
-    width: calc(100vw - 40%);
+    width: 60vw;
     height: 100vh;
     background-color: #222;
     position: absolute;
@@ -234,14 +234,16 @@
     font-size: 1.5rem;
   }
   .header-bg-mob {
+    width: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
   .header-bg-logo-mob {
-    width: 60%;
+    width: 100%;
     opacity: 0.4;
+    max-width: 250px;
   }
   header {
     width: 100%;
@@ -379,22 +381,28 @@
     justify-content: center;
   }
   .main-p2 {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    z-index: 1;
   }
   .main-p1 {
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
     transform: scale(0);
     animation: scaleUP 3s 2s forwards cubic-bezier(0, 1.01, 0.32, 1);
   }
   .img-main {
-    width: 598px;
-    margin-right: 120px;
+    width: 120vh;
+    margin-top: -400px;
+    opacity: 0.2;
     filter: grayscale(100%);
-    transition: 1s;
+    transition: 0s;
   }
   .cs-envolve-img {
     transition: 1s;
@@ -410,6 +418,7 @@
   }
   .main .row {
     height: 100%;
+    justify-content: center;
   }
   .cs-slider {
     background-color: #222;
@@ -648,6 +657,26 @@
   .cs-glow-effect-color-white {
     background: #bcbcbc;
     background: linear-gradient(0deg, #bcbcbc, #222222 30%);
+  }
+}
+@media screen and (min-width: 576px) {
+  .nav-mob {
+    width: auto;
+  }
+  .header-bg-mob {
+    width: auto;
+  }
+}
+@media screen and (min-width: 880px) {
+  .main-p1 {
+    max-width: 50%;
+  }
+  .img-main {
+    width: 598px;
+    margin-right: 120px;
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 1;
   }
 }
 @media screen and (min-width: 1024px) {
