@@ -18,7 +18,7 @@ verOfertas.addEventListener('mouseleave', function(e){
     var tirarTransition = setInterval(function () {
         greyScale.style.transition = '0s';
         clearInterval(tirarTransition)
-    }, 1200)
+    }, 1100)
     
 })
 

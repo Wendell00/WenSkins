@@ -411,7 +411,7 @@
   }
   .main {
     max-width: 1300px;
-    height: 500px;
+    height: calc(100vh - 257px);
     margin-bottom: 45px;
     position: fixed;
     z-index: 1;
@@ -419,6 +419,10 @@
   .main .row {
     height: 100%;
     justify-content: center;
+  }
+  .parallax {
+    height: calc(100vh - 257px);
+    margin-bottom: 45px;
   }
   .cs-slider {
     background-color: #222;
@@ -504,6 +508,7 @@
   /* SLIDER */
   .cs-slider {
     position: relative;
+    height: 100vh;
     z-index: 2;
   }
   .cs-carousel {
@@ -873,8 +878,4 @@
 }
 .cs-font-style {
   font-style: italic;
-}
-.parallax {
-  height: 500px;
-  margin-bottom: 45px;
 }
