@@ -398,8 +398,8 @@
     animation: scaleUP 3s 2s forwards cubic-bezier(0, 1.01, 0.32, 1);
   }
   .img-main {
-    width: 120vh;
-    margin-top: -400px;
+    width: 846px;
+    margin-top: -50px;
     opacity: 0.2;
     filter: grayscale(100%);
     transition: 0s;
@@ -411,7 +411,6 @@
   }
   .main {
     max-width: 1300px;
-    height: calc(100vh - 257px);
     margin-bottom: 45px;
     position: fixed;
     z-index: 1;
@@ -421,8 +420,8 @@
     justify-content: center;
   }
   .parallax {
-    height: calc(100vh - 257px);
     margin-bottom: 45px;
+    height: calc(100vh - 257px);
   }
   .cs-slider {
     background-color: #222;
@@ -680,7 +679,6 @@
     width: 598px;
     margin-right: 120px;
     margin-left: 0;
-    margin-top: 0;
     opacity: 1;
   }
 }
@@ -716,6 +714,18 @@
   .btn-menu-mob,
   .btn-config-mob {
     display: none;
+  }
+}
+@media screen and (max-height: 600px) {
+  .main,
+  .parallax {
+    height: calc(100vh - 157px);
+  }
+  .main {
+    align-items: center;
+  }
+  .cs-envolve {
+    margin-top: 40px;
   }
 }
 .dis-flex {
