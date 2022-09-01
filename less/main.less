@@ -117,6 +117,19 @@
          margin-right: -5px;
      }
 
+     header .navbar-center {
+        width: 250px;
+        height: 120px;
+        background-color: @primary-color;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        box-sizing: content-box;
+        border-radius: 0 0 50px 50px;
+        border: 5px solid #373737;
+        border-top: none;
+    }
+
      .nav-1,
      .nav-2 {
          background-color: @primary-color;
@@ -197,19 +210,6 @@
 
      .nav-a:hover {
          color: rgba(255, 255, 255, 0.897);
-     }
-
-     header .navbar-center {
-         width: 250px;
-         height: 120px;
-         background-color: @primary-color;
-         padding: 10px;
-         display: flex;
-         justify-content: center;
-         box-sizing: content-box;
-         border-radius: 0 0 50px 50px;
-         border: 5px solid #373737;
-         border-top: none;
      }
 
      nav .logo {
@@ -629,6 +629,19 @@
  @media screen and (min-width: 1364px) {}
 
  @media screen and (min-width: 1600px) {}
+
+@media  screen and (min-height: 426px) {
+}
+
+ @media screen and (max-height: 425px) {
+    .navbar-center{
+        display: none !important;
+    }
+
+    .main{
+        margin-top: -80px; 
+    }
+ }
 
  @media screen and (max-height: 600px) {
     .parallax{
