@@ -386,7 +386,6 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100%;
     z-index: 1;
   }
@@ -401,7 +400,7 @@
   }
   .img-main {
     width: 846px;
-    margin-top: 200px;
+    margin-top: -80px;
     opacity: 0.2;
     filter: grayscale(100%);
     transition: 0s;
@@ -683,7 +682,7 @@
   .img-main {
     width: 598px;
     margin-right: 120px;
-    margin-top: -50px;
+    margin-top: -44px;
     margin-left: 0;
     opacity: 1;
   }
