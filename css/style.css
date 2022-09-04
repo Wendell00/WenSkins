@@ -743,6 +743,11 @@
     margin-top: 40px;
   }
 }
+@media screen and (min-height: 758px) {
+  .parallax {
+    height: 500px;
+  }
+}
 .dis-flex {
   display: flex;
 }
