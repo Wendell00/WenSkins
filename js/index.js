@@ -10,11 +10,11 @@ let verOfertas = document.querySelector(".btn-offers")
 // Filtro na img da main
 verOfertas.addEventListener('mouseover', function(e){
     greyScale.style.transition = '1s';
-    greyScale.style.filter = 'grayscale(0%)';
+    greyScale.style.filter = 'grayscale(0%) drop-shadow(15px 10px 4px #222)';
 })
 
 verOfertas.addEventListener('mouseleave', function(e){
-    greyScale.style.filter = 'grayscale(100%)';
+    greyScale.style.filter = 'grayscale(100%) drop-shadow(15px 10px 4px #222)';
     var tirarTransition = setInterval(function () {
         greyScale.style.transition = '0s';
         clearInterval(tirarTransition)

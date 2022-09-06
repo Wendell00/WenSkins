@@ -402,7 +402,7 @@
     width: 846px;
     margin-top: -80px;
     opacity: 0.2;
-    filter: grayscale(100%);
+    filter: grayscale(100%) drop-shadow(15px 10px 4px #222);
     transition: 0s;
   }
   .cs-envolve-img {
