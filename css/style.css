@@ -662,6 +662,9 @@
     background: #bcbcbc;
     background: linear-gradient(0deg, #bcbcbc, #222222 30%);
   }
+  .container-switchColor {
+    display: none;
+  }
 }
 @media screen and (min-width: 576px) {
   .nav-mob {
@@ -720,12 +723,63 @@
     display: none;
   }
   .container-switchColor {
-    height: 100vh;
-    width: 100vw;
-    background-color: #fff;
+    right: 48px;
+    bottom: 18px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #FCA311;
     position: fixed;
     z-index: 3;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-switchColor .switchColor:hover {
+    color: #ccc;
+    cursor: pointer;
+  }
+  .switchColor-bars {
+    right: 48px;
+    bottom: 47px;
+    width: 58px;
+    height: 260px;
+    border-radius: 100% 100% 0 0;
+    background-color: #ccc;
+    position: fixed;
+    z-index: 3;
+    overflow: hidden;
+    transform: scale(0);
+  }
+  .switchColor-bars .decoration-bullet {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 0;
+    background-color: #FCA311;
+    border-radius: 0 0 20% 20%;
+  }
+  .switchColor-bars ul {
+    display: table;
+  }
+  .switchColor-bars ul li {
+    margin-left: 7px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .switchColor-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  .circle-green {
+    background-color: green;
+  }
+  .circle-blue {
+    background-color: blue;
+  }
+  .circle-rgb {
+    background-image: linear-gradient(45deg, hsl(240deg 100% 20%) 0%, hsl(289deg 100% 21%) 11%, hsl(315deg 100% 27%) 22%, hsl(329deg 100% 36%) 33%, hsl(337deg 100% 43%) 44%, hsl(357deg 91% 59%) 56%, hsl(17deg 100% 59%) 67%, hsl(34deg 100% 53%) 78%, hsl(45deg 100% 50%) 89%, hsl(55deg 100% 50%) 100%);
   }
 }
 @media screen and (max-height: 425px) {
@@ -1062,4 +1116,7 @@
 }
 .cs-font-style {
   font-style: italic;
+}
+.dis-none {
+  display: none;
 }

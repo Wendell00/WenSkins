@@ -42,11 +42,11 @@ setInterval(function () {
 
 // Fechar/Abrir menu Mobile
 
-let fecharMenuMob = document.querySelector('.btn-close-mob')
-let abrirMenuMob = document.querySelector('.btn-menu-mob')
-let headerBgMob = document.querySelector('.header-bg-mob')
-let menuMob = document.querySelector('.header-mob')
-let navMob = document.querySelector('.nav-mob')
+const fecharMenuMob = document.querySelector('.btn-close-mob')
+const abrirMenuMob = document.querySelector('.btn-menu-mob')
+const headerBgMob = document.querySelector('.header-bg-mob')
+const menuMob = document.querySelector('.header-mob')
+const navMob = document.querySelector('.nav-mob')
 
 abrirMenuMob.addEventListener('click', function(e){
     menuMob.classList.toggle('dis-block')
@@ -60,4 +60,15 @@ headerBgMob.addEventListener('click', function (e){
 fecharMenuMob.addEventListener('click', function (e){
     menuMob.classList.toggle('dis-block')
 })
+
+// Fechar/Abrir o Trocador de Cores
+
+const switchColor = document.querySelector('.switchColor-bars')
+const switchColorContainer = document.querySelector('.container-switchColor')
+
+switchColorContainer.addEventListener('click', function (e){
+    switchColor.classList.toggle('dis-none')
+    switchColor.classList.toggle('cs-scale-up')
+})
+
 
