@@ -208,7 +208,7 @@
   .header-mob {
     position: fixed;
     height: 100vh;
-    background-color: rgba(252, 163, 17, 0.95);
+    background-color: #fca311;
     display: none;
     z-index: 3;
   }
@@ -587,7 +587,8 @@
   .cs-items-counter span:nth-child(1) {
     color: #ccc;
   }
-  ion-icon {
+  .cs-item-prev ion-icon,
+  .cs-item-next ion-icon {
     font-size: 32px;
   }
   .cs-slider-container {
@@ -723,10 +724,10 @@
     display: none;
   }
   .container-switchColor {
-    right: 48px;
-    bottom: 18px;
-    width: 58px;
-    height: 58px;
+    right: 3.3vw;
+    bottom: 2.3vh;
+    width: 4vw;
+    height: 7.6vh;
     border-radius: 50%;
     background-color: #FCA311;
     position: fixed;
@@ -735,25 +736,29 @@
     justify-content: center;
     align-items: center;
   }
+  .container-switchColor ion-icon {
+    font-size: 2.5vw;
+  }
   .container-switchColor .switchColor:hover {
     color: #ccc;
     cursor: pointer;
   }
   .switchColor-bars {
-    right: 48px;
-    bottom: 47px;
-    width: 58px;
-    height: 260px;
+    right: 3.4vw;
+    bottom: 6.5vh;
+    width: 3.85vw;
+    height: 34vh;
     border-radius: 100% 100% 0 0;
-    background-color: #ccc;
+    background-color: #808080;
     position: fixed;
     z-index: 3;
     overflow: hidden;
     transform: scale(0);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
   }
   .switchColor-bars .decoration-bullet {
     width: 100%;
-    height: 80px;
+    height: 30%;
     position: relative;
     top: 0;
     background-color: #FCA311;
@@ -761,16 +766,20 @@
   }
   .switchColor-bars ul {
     display: table;
+    width: 100%;
+    height: 59%;
   }
   .switchColor-bars ul li {
-    margin-left: 7px;
-    margin-top: 8px;
+    margin-left: 15%;
+    margin-top: 13.7%;
+    height: 27.8%;
     cursor: pointer;
   }
   .switchColor-circle {
-    width: 40px;
-    height: 40px;
+    width: 79.3%;
+    height: 90%;
     border-radius: 100%;
+    filter: drop-shadow(4px 4px 4px #222);
   }
   .circle-green {
     background-color: green;
