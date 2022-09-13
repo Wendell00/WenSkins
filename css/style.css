@@ -907,6 +907,17 @@
     padding-top: 0;
   }
 }
+@media screen and (min-height: 1081px) {
+  .cs-scroll-down {
+    height: 142px;
+  }
+  .parallax {
+    height: 752px;
+  }
+  .cs-info {
+    font-size: 21.6px;
+  }
+}
 @media screen and (min-width: 1921px) and (min-height: 1081px) {
   .title {
     font-size: 70px;
@@ -949,17 +960,6 @@
   }
   .title {
     font-size: 86.4px;
-  }
-  .cs-info {
-    font-size: 21.6px;
-  }
-}
-@media screen and (min-height: 1081px) {
-  .cs-scroll-down {
-    height: 142px;
-  }
-  .parallax {
-    height: 752px;
   }
   .cs-info {
     font-size: 21.6px;
