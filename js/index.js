@@ -71,4 +71,5 @@ switchColorContainer.addEventListener('click', function (e){
     switchColor.classList.toggle('cs-scale-up')
 })
 
-
+class_obj = document.querySelector(".switchColor-circle").className.split(' ')[1]; 
+console.log(class_obj);
