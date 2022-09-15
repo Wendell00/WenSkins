@@ -71,5 +71,38 @@ switchColorContainer.addEventListener('click', function (e){
     switchColor.classList.toggle('cs-scale-up')
 })
 
-class_obj = document.querySelector(".switchColor-circle").className.split(' ')[1]; 
-console.log(class_obj);
+// const class_obj = document.querySelectorAll(".switchColor-circle")
+// const nav1 = document.querySelector('.nav-1')
+
+// class_obj.addEventListener('click', (event) =>{
+//     console.log(class_obj)
+//     nav1.classList.add(circulo_name)
+// })
+
+const componentColor = document.querySelectorAll('.switchColorID')
+const circleRGB = document.querySelector('.circle-rgb')
+const circleBlue = document.querySelector('.circle-blue')
+const circleGreen = document.querySelector('.circle-green')
+
+circleRGB.addEventListener('click', () =>{
+    for(var count = 0; count < componentColor.length; count++){
+        componentColor[count].style.backgroundImage = 'linear-gradient(45deg, hsl(240deg 100% 20%) 0%, hsl(289deg 100% 21%) 11%, hsl(315deg 100% 27%) 22%, hsl(329deg 100% 36%) 33%, hsl(337deg 100% 43%) 44%, hsl(357deg 91% 59%) 56%, hsl(17deg 100% 59%) 67%, hsl(34deg 100% 53%) 78%, hsl(45deg 100% 50%) 89%, hsl(55deg 100% 50%) 100%)'
+
+    }    
+})
+
+circleBlue.addEventListener('click', () =>{
+    for(var count = 0; count < componentColor.length; count++){
+        componentColor[count].style.backgroundImage = ''
+        componentColor[count].style.backgroundColor = 'blue';
+    }    
+})
+
+
+circleGreen.addEventListener('click', () =>{
+    for(var count = 0; count < componentColor.length; count++){
+        componentColor[count].style.backgroundImage = ''
+        componentColor[count].style.backgroundColor = 'green';
+    }    
+})
+
