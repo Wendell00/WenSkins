@@ -80,29 +80,95 @@ switchColorContainer.addEventListener('click', function (e){
 // })
 
 const componentColor = document.querySelectorAll('.switchColorID')
+const componentColorText = document.querySelectorAll('.switchColorTextID')
+const allCircles = document.querySelectorAll('.switchColor-circle')
 const circleRGB = document.querySelector('.circle-rgb')
 const circleBlue = document.querySelector('.circle-blue')
 const circleGreen = document.querySelector('.circle-green')
 
 circleRGB.addEventListener('click', () =>{
+
     for(var count = 0; count < componentColor.length; count++){
         componentColor[count].style.backgroundImage = 'linear-gradient(45deg, hsl(240deg 100% 20%) 0%, hsl(289deg 100% 21%) 11%, hsl(315deg 100% 27%) 22%, hsl(329deg 100% 36%) 33%, hsl(337deg 100% 43%) 44%, hsl(357deg 91% 59%) 56%, hsl(17deg 100% 59%) 67%, hsl(34deg 100% 53%) 78%, hsl(45deg 100% 50%) 89%, hsl(55deg 100% 50%) 100%)'
-
     }    
+    for(var count = 0; count < componentColorText.length; count++){
+        componentColorText[count].style.background = 'linear-gradient(45deg, hsl(240deg 100% 20%) 0%, hsl(289deg 100% 21%) 11%, hsl(315deg 100% 27%) 22%, hsl(329deg 100% 36%) 33%, hsl(337deg 100% 43%) 44%, hsl(357deg 91% 59%) 56%, hsl(17deg 100% 59%) 67%, hsl(34deg 100% 53%) 78%, hsl(45deg 100% 50%) 89%, hsl(55deg 100% 50%) 100%)'
+        componentColorText[count].style.webkitTextFillColor = 'transparent'
+        componentColorText[count].style.webkitBackgroundClip = 'text'
+    }  
+
+    if(circleRGB.classList.contains('activeCircle')){
+        switchColorToOrange()
+    } else{
+        removeActiveCircle()
+    }
+
+    circleRGB.classList.toggle('activeCircle')
+    circleRGB.classList.toggle('bg-color-rgb')
 })
 
 circleBlue.addEventListener('click', () =>{
+    circleRGB.classList.add('bg-color-rgb')
+
     for(var count = 0; count < componentColor.length; count++){
         componentColor[count].style.backgroundImage = ''
-        componentColor[count].style.backgroundColor = 'blue';
+        componentColor[count].style.backgroundColor = '#116afc';
     }    
+    for(var count = 0; count < componentColorText.length; count++){
+        componentColorText[count].style.background = '#116afc'
+        componentColorText[count].style.webkitTextFillColor = 'transparent'
+        componentColorText[count].style.webkitBackgroundClip = 'text'
+    }  
+
+    if(circleBlue.classList.contains('activeCircle')){
+        switchColorToOrange()
+    } else{
+        removeActiveCircle()
+    }
+
+    circleBlue.classList.toggle('activeCircle')
 })
 
 
 circleGreen.addEventListener('click', () =>{
+    circleRGB.classList.add('bg-color-rgb')
+
     for(var count = 0; count < componentColor.length; count++){
         componentColor[count].style.backgroundImage = ''
-        componentColor[count].style.backgroundColor = 'green';
+        componentColor[count].style.backgroundColor = '#13aa0a';
     }    
+    for(var count = 0; count < componentColorText.length; count++){
+        componentColorText[count].style.background = '#13aa0a'
+        componentColorText[count].style.webkitTextFillColor = 'transparent'
+        componentColorText[count].style.webkitBackgroundClip = 'text'
+    }  
+
+    if(circleGreen.classList.contains('activeCircle')){
+        switchColorToOrange()
+    } else{
+        removeActiveCircle()
+    }
+
+    circleGreen.classList.toggle('activeCircle')
 })
+
+function removeActiveCircle(){
+    for(var count = 0; count < allCircles.length; count++){
+        allCircles[count].classList.remove('activeCircle')
+
+    }    
+}
+
+function switchColorToOrange(){
+    for(var count = 0; count < componentColor.length; count++){
+        componentColor[count].style.backgroundImage = ''
+        componentColor[count].style.backgroundColor = '#FCA311';
+    }  
+
+    for(var count = 0; count < componentColorText.length; count++){
+        componentColorText[count].style.background = '#FCA311'
+        componentColorText[count].style.webkitTextFillColor = 'transparent'
+        componentColorText[count].style.webkitBackgroundClip = 'text'
+    }  
+}
 
