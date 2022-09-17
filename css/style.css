@@ -280,6 +280,34 @@
   .btn-config-mob {
     margin-right: -5px;
   }
+  .header-switch-mob {
+    position: fixed;
+    height: 100vh;
+    background-color: #fca311;
+    display: none;
+    z-index: 3;
+  }
+  .header-switch-mob .nav-mob {
+    width: 60vw;
+    height: 100vh;
+    background-color: #222;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    right: -100%;
+  }
+  .header-switch-mob .nav-mob ul {
+    margin-top: 70px;
+  }
+  .header-switch-mob .nav-mob ul li {
+    margin-top: 20px;
+    list-style-type: none;
+  }
+  .header-switch-mob .nav-mob ul li .nav-a-mob {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
   header {
     position: relative;
     z-index: 2;
@@ -726,7 +754,7 @@
   .container-switchColor {
     right: 3.3vw;
     bottom: 2.3vh;
-    width: 4vw;
+    width: 4%;
     height: 7.6vh;
     border-radius: 50%;
     background-color: #FCA311;

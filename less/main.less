@@ -106,6 +106,46 @@
          margin-right: -5px;
      }
 
+     .header-switch-mob{
+         position: fixed;
+         height: 100vh;
+         background-color: rgba(252, 163, 17, 1);
+         display: none;
+         z-index: 3;
+
+         .nav-mob {
+             width: 60vw;
+             height: 100vh;
+             background-color: #222;
+             position: absolute;
+             top: 0px;
+             opacity: 0;
+             right: -100%;
+
+             ul {
+                 margin-top: 70px;
+
+                 li {
+                     margin-top: 20px;
+                     list-style-type: none;
+
+                     .nav-a-mob {
+                         text-decoration: none;
+                         color: #fff;
+                         font-size: 1.5rem;
+                     }
+                 }
+             }
+         }
+         .header-bg-mob {
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+     }
+
      header {
          position: relative;
          z-index: 2;
@@ -629,7 +669,7 @@
      .container-switchColor{
         right: 3.3vw;
         bottom: 2.3vh;
-        width: 4vw;
+        width: 4%;
         height: 7.6vh;
         border-radius: 50%;
         background-color: @primary-color;
