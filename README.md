@@ -1,3 +1,3 @@
 # WenSkins
 
-Um site feito para fins de aumentar o aprendizado.
+Um website feito para fins de aumentar o aprendizado.
